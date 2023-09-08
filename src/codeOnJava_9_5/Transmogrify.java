@@ -2,6 +2,11 @@ package codeOnJava_9_5;
 
 /**
  * 通过组合动态的改变对象的行为（状态设计模式）
+ *
+ * 运行结果：
+ * HappyActor
+ * SadActor
+ *
  */
 
 class Actor {
@@ -40,3 +45,4 @@ public class Transmogrify {
         stage.performPlay();
     }
 }
+
