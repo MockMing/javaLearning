@@ -4,7 +4,8 @@
 
 package codeOnJava_20.generics;
 
-class SelfBounded<T extends SelfBounded<T>> {
+// 标准自限定类型
+class SelfBounded<T extends SelfBounded<T>> {       // 要与 BasicHolder 对比
     T element;
     SelfBounded<T> set(T arg) {
         element = arg;
@@ -17,7 +18,7 @@ class SelfBounded<T extends SelfBounded<T>> {
 
 class A extends SelfBounded<A> { }
 
-class B extends SelfBounded<A> { }
+class B extends SelfBounded<A> { }          // 这样也可以，前提是上一行的存在，因为此时 A 类型已经确定了，但是 B 不是自限定类型
 
 class C extends SelfBounded<C> {
     C setAndGet(C arg) {
